@@ -1,0 +1,54 @@
+<?php
+/**
+ * @package Order Tracking.
+ * @author: A.A.Treitjak
+ * @copyright: 2012 - 2013 BelVG.com
+ */
+
+/**
+ * @var $this Belvg_Ordertracking_Block_Tracking
+ */
+
+$helper = $this->helper('ordertracking');
+
+?>
+
+<div>
+    <div class="page-title">
+        <h1><?php echo $this->__('Order Tracking') ?></h1>
+    </div>
+    <div class="content">
+        <p><?php echo $this->__('Enter your email address and order number into the form below to obtain the shipment tracking info for your order.') ?></p>
+        <form action="<?php echo $this->getFormUrl() ?>" method="post" id="tracking_form">
+            <div class="fieldset">
+                <h2 class="legend"><?php echo $this->__('Track your order') ?></h2>
+                <ul class="form-list">
+                    <?php if($helper->showEmail()): ?>
+                    <li>
+                        <label for="tracking_email" class="required"><em>*</em><?php echo $this->__('Email Address') ?>:</label>
+                        <div class="input-box">
+                            <input name="email" id="tracking_email" title="<?php echo $this->__('Email Address') ?>" value="" class="input-text required-entry validate-email validation-passed" type="text">
+                        </div>
+                    </li>
+                    <?php endif; ?>
+                    <li>
+                        <label for="tracking_email" class="required"><em>*</em><?php echo $this->__('Order Number') ?>:</label>
+                        <div class="input-box">
+                            <input name="order" id="tracking_order" title="<?php echo $this->__('Order Number') ?>" value="" class="input-text required-entry validate-number validation-passed" type="text">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons-set">
+                <p class="required">* <?php echo $this->__('Required Fields') ?></p>
+                <button type="submit" title="View Tracking Status" class="button validation-passed"><span><span><?php echo $this->__('View Tracking Status') ?></span></span></button>
+            </div>
+        </form>
+        <?php echo $this->getChildHtml('order-tracking-result') ?>
+        <script type="text/javascript">
+            //<![CDATA[
+            var trackingForm = new VarienForm('tracking_form');
+            //]]>
+        </script>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<?php
+/**
+ * @package Order Tracking.
+ * @author: A.A.Treitjak
+ * @copyright: 2012 - 2013 BelVG.com
+ */
+?>
+
+<div id="tracking_result" style="">
+    <div class="page-title">
+        <h1><?php echo $this->__('Tracking Number(s) Not Found!') ?></h1>
+    </div>
+    <div class="content">
+        <?php echo $this->escapeHtml($this->getNotFoundMessage()); ?>
+    </div>
+</div>

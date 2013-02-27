@@ -1,0 +1,41 @@
+<?php
+/**
+ * @package Order Tracking.
+ * @author: A.A.Treitjak
+ * @copyright: 2012 - 2013 BelVG.com
+ */
+
+/**
+ * @var $this Belvg_Ordertracking_Block_Tracking
+ */
+
+$services = $this->getTrackingServices();
+?>
+
+<div id="tracking_result" style="">
+    <div class="page-title">
+        <h1><?php echo $this->__('Tracking Number(s)') ?></h1>
+    </div>
+    <div class="content">
+        <table width="100%" class="data-table">
+            <thead>
+            <tr class="first last">
+                <th><strong><?php echo $this->__('Carrier') ?></strong></th>
+                <th><strong><?php echo $this->__('Tracking Number') ?></strong></th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach($services as $service): ?>
+                <tr class="<?php echo $service->getCode() ?>">
+                    <td><?php echo $service->getTitle() ?></td>
+                    <td>
+                        <a href="#" onclick="popWin('<?php echo $service->getUrl() ?>','trackshipment','width=800,height=600,top=0,left=0,resizable=yes,scrollbars=yes'); return false;" title="<?php echo $this->__('Track this shipment') ?>">
+                            <?php echo $service->getTrackNumber() ?>
+                        </a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>

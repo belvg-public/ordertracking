@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Belvg_Ordertracking>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Belvg_All/>
+                <Mage_Shipping/>
+            </depends>
+        </Belvg_Ordertracking>
+    </modules>
+</config>

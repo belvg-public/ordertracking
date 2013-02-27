@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+
+    <default>
+        <reference name="top.links">
+            <action method="addLink" translate="label title" module="ordertracking" ifconfig="ordertracking/settings/enabled">
+                <label>Order Tracking</label>
+                <url helper="ordertracking/trackingUrl" />
+                <title>Order Tracking</title>
+            </action>
+        </reference>
+
+        <reference name="footer_links">
+            <action method="addLink" translate="label title" module="ordertracking" ifconfig="ordertracking/settings/enabled">
+                <label>Order Tracking</label>
+                <url helper="ordertracking/trackingUrl" />
+                <title>Order Tracking</title>
+            </action>
+        </reference>
+    </default>
+
+    <ordertracking_tracking_index>
+        <reference name="content">
+            <block type="ordertracking/tracking" name="order.tracking" template="belvg/ordertracking/view.phtml"/>
+        </reference>
+    </ordertracking_tracking_index>
+
+    <ordertracking_tracking_tracking>
+        <reference name="content">
+            <block type="ordertracking/tracking" name="order.tracking" template="belvg/ordertracking/view.phtml"/>
+            <block type="ordertracking/tracking" name="order.tracking.result" as="order-tracking-result"/>
+        </reference>
+    </ordertracking_tracking_tracking>
+
+</layout>
