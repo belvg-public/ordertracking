@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!--
+/**
+* BelVG LLC.
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the EULA
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+*
+* **************************************
+*         MAGENTO EDITION USAGE NOTICE *
+* ***************************************
+* This package designed for Magento COMMUNITY edition
+* BelVG does not guarantee correct work of this extension
+* on any other Magento edition except Magento COMMUNITY edition.
+* BelVG does not provide extension support in case of
+* incorrect edition usage.
+* **************************************
+*         DISCLAIMER   *
+* ***************************************
+* Do not edit or add to this file if you wish to upgrade Magento to newer
+* versions in the future.
+* ****************************************************
+* @category    Belvg
+* @package     Belvg_All
+* @copyright   Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+* @license     http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+*/
+-->
+<config>
+    <tabs>
+        <belvg translate="label" module="belvgall">
+            <label><![CDATA[<div style="background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJsAAAAUCAYAAACah0+BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpEMjQxMjA5QTAwOTBFMDExQkJCQ0JBQTc3MUMxMUVCNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBODNGMkZDRjkwMjgxMUUwODNFNjgyODE1RDJCMUM1NyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBODNGMkZDRTkwMjgxMUUwODNFNjgyODE1RDJCMUM1NyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3ODJEOTU4QzI4OTBFMDExQkJCQ0JBQTc3MUMxMUVCNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpEMjQxMjA5QTAwOTBFMDExQkJCQ0JBQTc3MUMxMUVCNCIvPiA8L3JkZjpEZXNjcmlwdGlv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) no-repeat; width: 155px; height: 20px;"></div>]]>
+            </label>
+            <sort_order>300</sort_order>
+        </belvg>
+    </tabs>
+
+    <sections>
+        <belvgall translate="label">
+            <label>General</label>
+            <tab>belvg</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>777</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <extensions translate="label">
+                    <label>Installed Extensions</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>belvgall/extensions</frontend_model>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </extensions>
+                <feed>
+                    <label>Notifications</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>90</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <interests translate="label">
+                            <label>I'd like to be informed by Belvg about:</label>
+                            <comment></comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <source_model>belvgall/source_updates_type</source_model>
+                        </interests>
+                    </fields>
+                </feed>
+            </groups>
+        </belvgall>
+        <related>
+            <label>Related Extensions</label>
+            <tab>belvg</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>9999</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <extensions translate="label">
+                    <label>Related Extensions</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>belvgall/store</frontend_model>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </extensions>
+            </groups>
+        </related>
+    </sections>
+</config>
